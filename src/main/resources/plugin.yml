@@ -1,0 +1,10 @@
+name: FrameStaffWork
+version: '${project.version}'
+main: ru.fleyer.framestaffwork.FrameStaffWork
+softdepend: [ LiteBans ]
+commands:
+  staffwork:
+    aliases: [sw, staffw, swork]
+    description: staff work
+
+

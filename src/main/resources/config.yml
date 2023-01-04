@@ -1,0 +1,56 @@
+mysql:
+  ip: localhost
+  port: 3306
+  username: root
+  password: ''
+  database: test
+  table: workInfo
+
+time_format: "&6%days%&7 дней, &6%hours%&7 часов, &6%minutes%&7 минут, &6%seconds%&7 секунд(-ы)"
+
+settings:
+  chest: true
+  hit: true
+  deny-commands-list:
+    - ban
+    - check
+    - kick
+    - /kick
+    - /mute
+    - /tempban
+    - /tempmute
+    - /kill
+groups_off:
+  admin:
+    ALLmessage: ''
+    message: ''
+    commands:
+      - lp user %player% parent set admin
+      - tab player %player% tabprefix &6&lАДМИН
+  test:
+    ALLmessage: '&6&lSTAFFWORK &8» &fАдминистратор %prefix% &f%player% &fзакончил свою работу. &7[&c&l✖&7]'
+    message: '&6&lSTAFFWORK &8» &fВы &c&nзакончили&r &fсвою работу за админа.'
+    commands:
+      - lp user %player% parent set otest
+      - tab player %player% tabprefix &6&lOTest
+groups_on:
+  admin:
+    ALLmessage: '&6&lSTAFFWORK &8» &fАдминистратор %prefix% &f%player% &fначал свою
+      работу. &7[&a&l✓&7]'
+    message: '&6&lSTAFFWORK &8» &fВы &a&nначали&r &fсвою работу за админа.'
+    commands:
+      - lp user %player% parent set oadmin
+      - tab player %player% tabprefix &6&l.РАДМИН
+  otest:
+    ALLmessage: '&6&lSTAFFWORK &8» &fАдминистратор %prefix% &f%player% &fначал свою работу. &7[&a&l✓&7]'
+    message: '&6&lSTAFFWORK &8» &fВы &a&nначали&r &fсвою работу за админа.'
+    commands:
+      - lp user %player% parent set test
+      - tab player %player% tabprefix &6&lTest
+
+perms:
+  admin: staffwork.admin
+  reload: staffwork.reload
+  staffwork: staffwork.use
+  view: staffwork.view
+

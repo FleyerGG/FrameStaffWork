@@ -1,0 +1,59 @@
+hit_deny: '&cВы не можете бить игрока в режиме патруля'
+chest_deny: '&cВы не можете открывать сундуки в режиме патруля'
+deny: '&cДля этого действия вам нужно войти в режим патруля.'
+quit: '&cВы вышли из режима патруля, поскольку вы покинули сервер.'
+reloaded: '&aПлагин StaffWork перезагружен!'
+noperm: '&cНет прав!'
+vk_messages:
+  noadmin: "Увы вам не доступны эти приделы"
+  isNumeric: "Введите правильно айди! \nА именно .addVK [Ник на сервере] [вк айди в цифренном виде]"
+  isIDlenght: "Введите правильно айди. А именно .addVK [Ник на сервере] [вк айди в цифренном виде] (длина айди 9 символов)"
+  updateGroup: "Данный человек уже есть в базе данных однако мы добавили ему новую группу"
+  updateIDandGroup: "Данный человек уже есть в базе данных однако мы добавили ему новый айди и группу"
+  addPlayerVk: "Вы добавили в бд игрока. \n\nНик: %name% \n\n Группа: %group% \n\nВк: @id%id%"
+  YouNullDB: "Ваш вк нет в бд"
+  stats:
+    isNumeric: "Ввведите правильно айди! \nА именно .stats [вк айди в цифренном виде]"
+    targetNullDB: "Данного айди нет в бд %targetID%"
+    isIDlenght: "Ввведите правильно айди. \nА именно .stats [вк айди в цифренном виде] (длина айди 9 символов)"
+    info: "Информация об игроке %name% (%status%) \n\nБанов: %bans%\nМутов: %mutes%\nКиков: %kicks%\nРазбанов: %unbans%\nРазмутов: %unmute%\nОтыгранное время: %time% \n%bans% %mutes% %kicks% %unbans% %unmutes% %time%"
+stats:
+  work: "Онлайн"
+  nowork: "Не онлайн"
+  vk:
+    peerID: 123456789
+  info:
+    - "Информация об игроке %target% (%status%)"
+    - ""
+    - "Кол-во наказаний"
+    - "Банов: %bans%"
+    - "Мутов: %mutes%"
+    - "Киков: %kicks%"
+    - "Разбанов: %unbans%"
+    - "Размутов: %unmute%"
+    - "Отыгранное время: %time%"
+    - ""
+
+
+help:
+  - '1'
+  - '2'
+  - '3'
+
+
+
+
+goups-off:
+  admin:
+    ALLmessage: '&6&lSTAFFWORK &8» &fАдминистратор %prefix% &f%player% &fзакончил свою работу. &7[&c&l✖&7]'
+    message: '&6&lSTAFFWORK &8» &fВы &c&nзакончили&r &fсвою работу за админа.'
+    commands:
+      - lp user %player% parent set admin
+      - tab player %player% tabprefix &6&lАДМИН
+groups_on:
+  admin:
+    ALLmessage: '&6&lSTAFFWORK &8» &fАдминистратор %prefix% &f%player% &fначал свою работу. &7[&a&l✓&7]'
+    message: '&6&lSTAFFWORK &8» &fВы &a&nначали&r &fсвою работу за админа.'
+    commands:
+      - lp user %player% parent set oadmin
+      - tab player %player% tabprefix &6&l.РАДМИН
