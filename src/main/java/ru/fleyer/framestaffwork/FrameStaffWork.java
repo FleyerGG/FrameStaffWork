@@ -36,29 +36,13 @@ public class FrameStaffWork extends JavaPlugin {
     public static Permission perms;
     private ConfigurationGeneration config;
     private ConfigurationGeneration lang;
-    private void Plugin() {
-        try {
-            final String url = "https://pastebin.com/raw/FBWQniPc";
-            final URLConnection con = new URL(url).openConnection();
-            con.setConnectTimeout(1000);
-            con.setReadTimeout(1000);
-            ((HttpURLConnection) con).setInstanceFollowRedirects(true);
-            final String response = new BufferedReader(new InputStreamReader(con.getInputStream())).readLine();
-            if (!"go_fuck_slivers_this_is_not_last_version".equals(response)) {
-                throw new RuntimeException();
-            }
-        } catch (Exception ex) {
-            // Bukkit.getPluginManager().disablePlugin(plugin);
-            Bukkit.shutdown();
-        }
-    }
+
    public static FrameStaffWork getInstance(){
        return instance;
    }
     @Override
     public void onEnable() {
         instance = this;
-        Plugin();
         config = new ConfigurationGeneration(this,"config.yml");
         lang = new ConfigurationGeneration(this,"lang.yml");
         registerEvents();
